@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeAnimations();
     initializeForm();
     initializeSkillBars();
+    initializeThemeToggle();
 });
 
 
@@ -429,3 +430,25 @@ window.addEventListener('load', function() {
     performance.mark('page-load-end');
     performance.measure('page-load-time', 'navigationStart', 'page-load-end');
 });
+
+// Aggiungi dopo document.addEventListener('DOMContentLoaded'...)
+function initializeThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Carica il tema salvato o usa le preferenze del sistema
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (prefersDarkScheme.matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    themeToggle?.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+}
