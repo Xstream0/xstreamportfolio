@@ -351,69 +351,6 @@ window.addEventListener('resize', debounce(function() {
 }, 250));
 
 
-let konamiCode = [];
-const konamiSequence = [
-    'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
-    'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
-    'KeyB', 'KeyA'
-];
-
-document.addEventListener('keydown', function(e) {
-    konamiCode.push(e.code);
-    
-    if (konamiCode.length > konamiSequence.length) {
-        konamiCode.shift();
-    }
-    
-    if (konamiCode.join('') === konamiSequence.join('')) {
-        showEasterEgg();
-        konamiCode = [];
-    }
-});
-
-function showEasterEgg() {
-    const message = document.createElement('div');
-    message.innerHTML = `
-        <div style="
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: var(--primary-color);
-            color: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-xl);
-            z-index: 10000;
-            text-align: center;
-            animation: fadeInUp 0.5s ease;
-        ">
-            <h3>🎉 Congratulazioni!</h3>
-            <p>Hai scoperto l'easter egg! <br>
-            Questo dimostra la mia attenzione ai dettagli.</p>
-            <button onclick="this.parentElement.parentElement.remove()" 
-                    style="
-                        background: white;
-                        color: var(--primary-color);
-                        border: none;
-                        padding: 0.5rem 1rem;
-                        border-radius: 6px;
-                        margin-top: 1rem;
-                        cursor: pointer;
-                        font-weight: 600;
-                    ">
-                Chiudi
-            </button>
-        </div>
-    `;
-    
-    document.body.appendChild(message);
-    
-    setTimeout(() => {
-        message.remove();
-    }, 10000);
-}
-
 if ('performance' in window && 'PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -427,16 +364,48 @@ if ('performance' in window && 'PerformanceObserver' in window) {
 }
 
 window.addEventListener('load', function() {
-    performance.mark('page-load-end');
-    performance.measure('page-load-time', 'navigationStart', 'page-load-end');
+    setTimeout(() => {
+        const preloader = document.querySelector('.preloader');
+        const loader = document.querySelector('.loader');
+        const loaderText = document.querySelector('.loader-text');
+        const siteContent = document.querySelector('.site-content');
+        
+        loader.style.display = 'none';
+        loaderText.style.display = 'none';
+        
+        const logoReveal = document.createElement('img');
+        logoReveal.src = 'Logo fatto da dexh-cerchio.png';
+        logoReveal.classList.add('logo-reveal');
+        preloader.appendChild(logoReveal);
+        
+        setTimeout(() => {
+            logoReveal.classList.add('active');
+            
+            setTimeout(() => {
+                logoReveal.classList.add('zoom-out');
+                
+                siteContent.style.opacity = '1';
+                siteContent.style.transform = 'translateY(0)';
+                
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    
+                    const elements = document.querySelectorAll('.hero__title, .hero__subtitle, .hero__buttons, .hero__code');
+                    elements.forEach((el, index) => {
+                        el.classList.add('stagger-animation');
+                        el.style.animationDelay = `${index * 0.2}s`;
+                    });
+                }, 800);
+            }, 1500);
+        }, 100);
+    }, 2000);
 });
 
-// Aggiungi dopo document.addEventListener('DOMContentLoaded'...)
 function initializeThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     
-    // Carica il tema salvato o usa le preferenze del sistema
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);

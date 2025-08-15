@@ -605,6 +605,24 @@ body {
     font-weight: 500;
 }
 
+[data-theme="light"] .portfolio__overlay {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="light"] .portfolio__title {
+    color: var(--gray-900);
+    font-weight: 800;
+}
+
+[data-theme="light"] .portfolio__description {
+    color: var(--gray-900);
+}
+
+[data-theme="light"] .tech-tag {
+    background: var(--primary-color);
+    color: white;
+}
+
 .testimonials {
     background: var(--light-color);
 }
@@ -990,35 +1008,46 @@ body {
         left: 0;
     }
     .hero__container {
-        gap: 1.2rem;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
     }
-    .hero__image {
-        margin-top: 1.5rem;
+    .hero__buttons {
+        justify-content: center;
     }
-    .about__img {
-        height: 240px;
+    .about__container {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
-    .about__container,
+    .skill {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .contact__container {
-        gap: 1.2rem;
+        grid-template-columns: 1fr;
+    }
+    .portfolio__container {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
     }
     .portfolio__img {
-        height: 180px;
+        height: 200px;
     }
-    .service__card,
-    .testimonial__card {
-        padding: 1rem;
+    .contact__details {
+        margin-bottom: 2rem;
     }
-    .footer__content {
-        gap: 1rem;
+    .nav__menu {
+        background: var(--dark-color);
+        padding: 2rem;
     }
-    .footer__info {
-        max-width: 100%;
-    }
-    .footer__links {
-        gap: 1rem;
+    .nav__link {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
     }
 }
+
 @media (max-width: 480px) {
     .container {
         padding: 0 6px;
@@ -1145,37 +1174,53 @@ body, html {
 
 @media (max-width: 480px) {
     .section {
-        padding: 36px 0;
+        padding: 3rem 0;
+    }
+
+    .hero {
+        padding-top: 5rem;
     }
 
     .hero__title {
         font-size: 2rem;
-    }
-
-    .hero__buttons {
-        flex-direction: column;
-        width: 100%;
+        line-height: 1.2;
     }
 
     .btn {
         width: 100%;
+        margin-bottom: 0.5rem;
     }
 
-    .section__title {
-        font-size: 1.75rem;
+    .portfolio__img {
+        height: 180px;
     }
 
-    .portfolio__container {
+    .footer__content {
         grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .services__container {
+    .footer__social {
+        justify-content: center;
+    }
+
+    .footer__links {
         grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
     }
+}
 
-    .contact__form {
-        padding: 1.5rem;
-    }
+[data-theme="light"] .nav__menu {
+    background: var(--light-bg-color);
+}
+
+[data-theme="light"] .nav__link {
+    color: var(--gray-900);
+}
+
+.container {
+    padding: 0 1.5rem;
 }
 
 .theme-toggle {
@@ -1279,4 +1324,101 @@ body {
 .hero .btn--secondary:hover {
     background: var(--primary-color);
     box-shadow: 0 0 25px var(--primary-color);
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.loader svg {
+    width: 100%;
+    height: 100%;
+}
+
+.loader circle {
+    fill: none;
+    stroke: var(--primary-color);
+    stroke-width: 4;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: dash 6s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 200;
+    }
+}
+
+.logo-reveal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+}
+
+.logo-reveal.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.logo-reveal.zoom-out {
+    transform: translate(-50%, -50%) scale(20);
+    opacity: 0;
+}
+
+.site-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+    min-height: 100vh;
+}
+
+.site-content.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes contentFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stagger-animation {
+    opacity: 0;
+    animation: contentFadeIn 0.5s ease-out forwards;
 }

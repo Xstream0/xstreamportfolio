@@ -6,391 +6,401 @@
     <title>Xstream - Web Developer Specialista HTML, CSS, JavaScript</title>
     <meta name="description" content="Web Developer specializzato in HTML, CSS e JavaScript puro. Creo siti web moderni, veloci e su misura per la tua azienda.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Logo fatto da dexh.png">
+    <link rel="icon" href="Logo fatto da dexh-cerchio.png">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav__logo">
-                <span class="logo-text">X</span>
-                <span class="logo-name">Xstream</span>
-            </div>
-            <ul class="nav__menu" id="nav-menu">
-                <li class="nav__item">
-                    <a href="#home" class="nav__link">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#about" class="nav__link">Chi sono</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#services" class="nav__link">Servizi</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#portfolio" class="nav__link">Portfolio</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#contact" class="nav__link">Contatti</a>
-                </li>
-            </ul>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                <svg class="theme-toggle__sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="5"/>
-                    <line x1="12" y1="1" x2="12" y2="3"/>
-                    <line x1="12" y1="21" x2="12" y2="23"/>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                    <line x1="1" y1="12" x2="3" y2="12"/>
-                    <line x1="21" y1="12" x2="23" y2="12"/>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                </svg>
-                <svg class="theme-toggle__moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                </svg>
-            </button>
-            <div class="nav__toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-
-    <section class="hero" id="home">
-        <div class="hero__container container">
-            <div class="hero__content">
-                <h1 class="hero__title">
-                    Creo siti web <span class="text-primary">moderni</span>, 
-                    <span class="text-primary">veloci</span> e 
-                    <span class="text-primary">su misura</span>
-                </h1>
-                <p class="hero__subtitle">
-                    Web Developer specializzato in HTML, CSS e JavaScript puro. 
-                    Trasformo le tue idee in esperienze web coinvolgenti e performanti.
-                </p>
-                <div class="hero__buttons">
-                    <a href="#contact" class="btn btn--primary">Contattami ora</a>
-                    <a href="#portfolio" class="btn btn--secondary">Vedi i miei lavori</a>
-                </div>
-            </div>
-            <div class="hero__image">
-                <div class="hero__code">
-                    <div class="code-line">
-                        <span class="code-tag">&lt;html&gt;</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="code-indent">  &lt;head&gt;</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="code-indent">    &lt;title&gt;</span><span class="code-text">Xstream</span><span class="code-tag">&lt;/title&gt;</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="code-indent">  &lt;/head&gt;</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="code-indent">  &lt;body&gt;</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="code-indent">    &lt;h1&gt;</span><span class="code-text">Benvenuto!</span><span class="code-tag">&lt;/h1&gt;</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="code-indent">  &lt;/body&gt;</span>
-                    </div>
-                    <div class="code-line">
-                        <span class="code-tag">&lt;/html&gt;</span>
-                    </div>
-                </div>
-            </div>
+    <div class="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="test" cx="40" cy="40" r="32"></circle>
+            </svg>
         </div>
-    </section>
+        <div class="loader-text">Caricamento...</div>
+    </div>
+    
+    <div class="site-content">
+        <header class="header">
+            <nav class="nav container">
+                <div class="nav__logo">
+                    <span class="logo-text">X</span>
+                    <span class="logo-name">Xstream</span>
+                </div>
+                <ul class="nav__menu" id="nav-menu">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Chi sono</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Servizi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contatti</a>
+                    </li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-toggle__sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="theme-toggle__moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
 
-    <section class="about section" id="about">
-        <div class="container">
-            <h2 class="section__title">Chi sono</h2>
-            <div class="about__container">
-                <div class="about__content">
-                    <p class="about__text">
-                        Sono un web developer appassionato con oltre 2 anni di esperienza nella creazione di siti web 
-                        utilizzando esclusivamente <strong>HTML, CSS e JavaScript puro</strong>. 
+        <section class="hero" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Creo siti web <span class="text-primary">moderni</span>, 
+                        <span class="text-primary">veloci</span> e 
+                        <span class="text-primary">su misura</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Web Developer specializzato in HTML, CSS e JavaScript puro. 
+                        Trasformo le tue idee in esperienze web coinvolgenti e performanti.
                     </p>
-                    <p class="about__text">
-                        La mia filosofia è quella di scrivere codice pulito e ottimizzato, 
-                        senza dipendere da framework pesanti. Ogni progetto è un'opportunità per creare 
-                        qualcosa di unico e su misura per le esigenze specifiche del cliente.
-                    </p>
-                    <div class="about__skills">
-                        <div class="skill">
-                            <span class="skill__name">HTML5</span>
-                            <div class="skill__bar">
-                                <div class="skill__percentage" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span class="skill__name">CSS3</span>
-                            <div class="skill__bar">
-                                <div class="skill__percentage" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span class="skill__name">JavaScript</span>
-                            <div class="skill__bar">
-                                <div class="skill__percentage" style="width: 85%"></div>
-                            </div>
-                        </div>
+                    <div class="hero__buttons">
+                        <a href="#contact" class="btn btn--primary">Contattami ora</a>
+                        <a href="#portfolio" class="btn btn--secondary">Vedi i miei lavori</a>
                     </div>
                 </div>
-                <div class="about__image">
-                    <img src="linguaggio-di-programmazione.jpg.webp" alt="Marco Rossi - Web Developer" class="about__img">
+                <div class="hero__image">
+                    <div class="hero__code">
+                        <div class="code-line">
+                            <span class="code-tag">&lt;html&gt;</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-indent">  &lt;head&gt;</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-indent">    &lt;title&gt;</span><span class="code-text">Xstream</span><span class="code-tag">&lt;/title&gt;</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-indent">  &lt;/head&gt;</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-indent">  &lt;body&gt;</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-indent">    &lt;h1&gt;</span><span class="code-text">Benvenuto!</span><span class="code-tag">&lt;/h1&gt;</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-indent">  &lt;/body&gt;</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-tag">&lt;/html&gt;</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="services section" id="services">
-        <div class="container">
-            <h2 class="section__title">Cosa offro</h2>
-            <div class="services__container">
-                <div class="service__card">
-                    <div class="service__icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
-                            <line x1="12" y1="22.08" x2="12" y2="12"/>
-                        </svg>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section__title">Chi sono</h2>
+                <div class="about__container">
+                    <div class="about__content">
+                        <p class="about__text">
+                            Sono un web developer appassionato con oltre 2 anni di esperienza nella creazione di siti web 
+                            utilizzando esclusivamente <strong>HTML, CSS e JavaScript puro</strong>. 
+                        </p>
+                        <p class="about__text">
+                            La mia filosofia è quella di scrivere codice pulito e ottimizzato, 
+                            senza dipendere da framework pesanti. Ogni progetto è un'opportunità per creare 
+                            qualcosa di unico e su misura per le esigenze specifiche del cliente.
+                        </p>
+                        <div class="about__skills">
+                            <div class="skill">
+                                <span class="skill__name">HTML5</span>
+                                <div class="skill__bar">
+                                    <div class="skill__percentage" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill__name">CSS3</span>
+                                <div class="skill__bar">
+                                    <div class="skill__percentage" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill__name">JavaScript</span>
+                                <div class="skill__bar">
+                                    <div class="skill__percentage" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="service__title">Siti Web Vetrina</h3>
-                    <p class="service__description">
-                        Siti web aziendali eleganti e professionali, ottimizzati per convertire i visitatori in clienti. 
-                        HTML semantico, CSS moderno e JavaScript per interazioni coinvolgenti.
-                    </p>
-                </div>
-                <div class="service__card">
-                    <div class="service__icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 1.16-.2 2.3-.64 3.38-1.31"/>
-                            <path d="M22 12c0 1.25-.25 2.5-.75 3.75"/>
-                            <path d="M18 12c0 1.5-1.5 3-3 3s-3-1.5-3-3 1.5-3 3-3 3 1.5 3 3z"/>
-                        </svg>
+                    <div class="about__image">
+                        <img src="linguaggio-di-programmazione.jpg.webp" alt="Marco Rossi - Web Developer" class="about__img">
                     </div>
-                    <h3 class="service__title">Ottimizzazione Performance</h3>
-                    <p class="service__description">
-                        Miglioro le prestazioni del tuo sito esistente. Codice pulito, immagini ottimizzate, 
-                        CSS e JavaScript compressi per velocità di caricamento superiori.
-                    </p>
-                </div>
-                <div class="service__card">
-                    <div class="service__icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 2a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h10z"/>
-                            <path d="M8 21h8"/>
-                            <path d="M12 17v4"/>
-                        </svg>
-                    </div>
-                    <h3 class="service__title">Responsive Design</h3>
-                    <p class="service__description">
-                        Siti web perfettamente adattabili a tutti i dispositivi. 
-                        Design mobile-first con CSS Grid e Flexbox per un'esperienza utente ottimale.
-                    </p>
-                </div>
-                <div class="service__card">
-                    <div class="service__icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.828 14.828a4 4 0 0 1-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service__title">Animazioni CSS</h3>
-                    <p class="service__description">
-                        Animazioni fluide e coinvolgenti create con CSS puro e JavaScript. 
-                        Micro-interazioni che migliorano l'esperienza utente senza appesantire il sito.
-                    </p>
-                </div>
-                <div class="service__card">
-                    <div class="service__icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4"/>
-                            <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1h18z"/>
-                            <path d="M3 12v6c0 .552.448 1 1 1h16c.552 0 1-.448 1-1v-6"/>
-                        </svg>
-                    </div>
-                    <h3 class="service__title">Manutenzione</h3>
-                    <p class="service__description">
-                        Supporto tecnico continuo e aggiornamenti regolari per mantenere il tuo sito 
-                        sempre sicuro, veloce e aggiornato con le ultime tecnologie web.
-                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="portfolio section" id="portfolio">
-        <div class="container">
-            <h2 class="section__title">Progetti</h2>
-            <div class="portfolio__container">
-                <div class="portfolio__item">
-                    <div class="portfolio__image">
-                        <img src="Screenshot 2025-07-27 164905.png" alt="E-commerce Boutique" class="portfolio__img">
-                        <div class="portfolio__overlay">
-                            <h3 class="portfolio__title">RXService</h3>
-                            <p class="portfolio__description">Hai bisogno di Bot Discord, SitiWeb, Grafiche, Loghi , Video Editing? Bene sei nel posto giusto entra su discord.rxservice.it.</p>
-                            <div class="portfolio__tech">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio__item">
-                    <div class="portfolio__image">
-                        <img src="image22.png" alt="Agenzia Marketing" class="portfolio__img">
-                        <div class="portfolio__overlay">
-                            <h3 class="portfolio__title">DiamondMC - Server Minecraft</h3>
-                            <p class="portfolio__description">Un sito web di un server Minecraft</p>
-                            <div class="portfolio__tech">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </section>
-
-    <section class="contact section" id="contact">
-        <div class="container">
-            <h2 class="section__title">Contattami</h2>
-            <div class="contact__container">
-                <div class="contact__info">
-                    <h3 class="contact__subtitle">Parliamo del tuo progetto</h3>
-                    <p class="contact__text">
-                        Hai un'idea per un sito web? Vuoi migliorare quello esistente? 
-                        Contattami per una consulenza gratuita e scopri come posso aiutarti 
-                        a raggiungere i tuoi obiettivi online.
-                    </p>
-                    <div class="contact__details">
-                        <div class="contact__item">
-                            <div class="contact__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
-                            </div>
-                            <div class="contact__data">
-                                <h4>Email</h4>
-                                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWrRlQqQstTtmMKkCDMBXcQcmFgNrDmXDgfNWMzLfzrllGDszWjFJPdmlcrZlGHLNzzhtfjkV">xstream0studio@gmail.com </a>
-                            </div>
-                        </div>
-                        <div class="contact__item">
-                            <div class="contact__icon">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
-  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
-</svg>
-                            </div>
-                            <div class="contact__data">
-                                <h4>Telegram</h4>
-                                <a href="https://t.me/Xstream_0">Xstream_0 </a>                            </div>
-                        </div>
-                       <div class="contact__item">
-                            <div class="contact__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
-                                <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+        </section>
+        <section class="services section" id="services">
+            <div class="container">
+                <h2 class="section__title">Cosa offro</h2>
+                <div class="services__container">
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
                             </svg>
-                            </div>
-                            <div class="contact__data">
-                                <h4>Discord</h4>
-                                <a href="https://discord.com/users/835113003459543060">Xstream </a>
+                        </div>
+                        <h3 class="service__title">Siti Web Vetrina</h3>
+                        <p class="service__description">
+                            Siti web aziendali eleganti e professionali, ottimizzati per convertire i visitatori in clienti. 
+                            HTML semantico, CSS moderno e JavaScript per interazioni coinvolgenti.
+                        </p>
+                    </div>
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 1.16-.2 2.3-.64 3.38-1.31"/>
+                                <path d="M22 12c0 1.25-.25 2.5-.75 3.75"/>
+                                <path d="M18 12c0 1.5-1.5 3-3 3s-3-1.5-3-3 1.5-3 3-3 3 1.5 3 3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service__title">Ottimizzazione Performance</h3>
+                        <p class="service__description">
+                            Miglioro le prestazioni del tuo sito esistente. Codice pulito, immagini ottimizzate, 
+                            CSS e JavaScript compressi per velocità di caricamento superiori.
+                        </p>
+                    </div>
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 2a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h10z"/>
+                                <path d="M8 21h8"/>
+                                <path d="M12 17v4"/>
+                            </svg>
+                        </div>
+                        <h3 class="service__title">Responsive Design</h3>
+                        <p class="service__description">
+                            Siti web perfettamente adattabili a tutti i dispositivi. 
+                            Design mobile-first con CSS Grid e Flexbox per un'esperienza utente ottimale.
+                        </p>
+                    </div>
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.828 14.828a4 4 0 0 1-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service__title">Animazioni CSS</h3>
+                        <p class="service__description">
+                            Animazioni fluide e coinvolgenti create con CSS puro e JavaScript. 
+                            Micro-interazioni che migliorano l'esperienza utente senza appesantire il sito.
+                        </p>
+                    </div>
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1h18z"/>
+                                <path d="M3 12v6c0 .552.448 1 1 1h16c.552 0 1-.448 1-1v-6"/>
+                            </svg>
+                        </div>
+                        <h3 class="service__title">Manutenzione</h3>
+                        <p class="service__description">
+                            Supporto tecnico continuo e aggiornamenti regolari per mantenere il tuo sito 
+                            sempre sicuro, veloce e aggiornato con le ultime tecnologie web.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio section" id="portfolio">
+            <div class="container">
+                <h2 class="section__title">Progetti</h2>
+                <div class="portfolio__container">
+                    <div class="portfolio__item">
+                        <div class="portfolio__image">
+                            <img src="Screenshot 2025-07-27 164905.png" alt="E-commerce Boutique" class="portfolio__img">
+                            <div class="portfolio__overlay">
+                                <h3 class="portfolio__title">RXService</h3>
+                                <p class="portfolio__description">Hai bisogno di Bot Discord, SitiWeb, Grafiche, Loghi , Video Editing? Bene sei nel posto giusto entra su discord.rxservice.it.</p>
+                                <div class="portfolio__tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="contact__item">
-                            <div class="contact__icon">
+                    </div>
+                    <div class="portfolio__item">
+                        <div class="portfolio__image">
+                            <img src="image22.png" alt="Agenzia Marketing" class="portfolio__img">
+                            <div class="portfolio__overlay">
+                                <h3 class="portfolio__title">DiamondMC - Server Minecraft</h3>
+                                <p class="portfolio__description">Un sito web di un server Minecraft</p>
+                                <div class="portfolio__tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section__title">Contattami</h2>
+                <div class="contact__container">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">Parliamo del tuo progetto</h3>
+                        <p class="contact__text">
+                            Hai un'idea per un sito web? Vuoi migliorare quello esistente? 
+                            Contattami per una consulenza gratuita e scopri come posso aiutarti 
+                            a raggiungere i tuoi obiettivi online.
+                        </p>
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <div class="contact__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div class="contact__data">
+                                    <h4>Email</h4>
+                                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWrRlQqQstTtmMKkCDMBXcQcmFgNrDmXDgfNWMzLfzrllGDszWjFJPdmlcrZlGHLNzzhtfjkV">xstream0studio@gmail.com </a>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+                                    </svg>
+                                </div>
+                                <div class="contact__data">
+                                    <h4>Telegram</h4>
+                                    <a href="https://t.me/Xstream_0">Xstream_0 </a>                            </div>
+                            </div>
+                           <div class="contact__item">
+                                <div class="contact__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                    <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                                </svg>
+                                </div>
+                                <div class="contact__data">
+                                    <h4>Discord</h4>
+                                    <a href="https://discord.com/users/835113003459543060">Xstream </a>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__icon">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
   <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
 </svg>
-                            </div>
-                            <div class="contact__data">
-                                <h4>Instagram</h4>
-                                <a href="https://www.instagram.com/xstream0/">Xstream0 </a>
+                                </div>
+                                <div class="contact__data">
+                                    <h4>Instagram</h4>
+                                    <a href="https://www.instagram.com/xstream0/">Xstream0 </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-  <form action="https://formspree.io/f/mldldedq" method="POST">
-    <div class="form__group">
-        <input type="text" id="name" name="name" class="form__input" placeholder=" " required>
-        <label for="name" class="form__label">Nome completo</label>
-    </div>
-    <div class="form__group">
-        <input type="email" id="email" name="email" class="form__input" placeholder=" " required>
-        <label for="email" class="form__label">Email</label>
-    </div>
-    <div class="form__group">
-        <input type="tel" id="phone" name="phone" class="form__input" placeholder=" ">
-        <label for="phone" class="form__label">Telefono (opzionale)</label>
-    </div>
-    <div class="form__group">
-        <select id="service" name="service" class="form__input" required>
-            <option value="">Seleziona un servizio</option>
-            <option value="sito-vetrina">Sito Web Vetrina</option>
-            <option value="ottimizzazione">Ottimizzazione Performance</option>
-            <option value="responsive">Responsive Design</option>
-            <option value="manutenzione">Manutenzione</option>
-            <option value="altro">Altro</option>
-        </select>
-        <label for="service" class="form__label">Servizio richiesto</label>
-    </div>
-    <div class="form__group">
-        <textarea id="message" name="message" class="form__input form__textarea" placeholder=" " required></textarea>
-        <label for="message" class="form__label">Messaggio</label>
-    </div>
-    <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Xstream">
-    <button type="submit" class="btn btn--primary btn--full">
-        <span class="btn__text">Invia messaggio</span>
-        <span class="btn__loading">Invio in corso...</span>
-    </button>
-</form>
-            </div>
+      <form action="https://formspree.io/f/mldldedq" method="POST">
+        <div class="form__group">
+            <input type="text" id="name" name="name" class="form__input" placeholder=" " required>
+            <label for="name" class="form__label">Nome completo</label>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__info">
-                    <div class="footer__logo">
-                        <span class="logo-text">X</span>
-                        <span class="logo-name">Xstream</span>
-                    </div>
-                    <p class="footer__text">
-                        Web Developer specializzato in HTML, CSS e JavaScript puro. 
-                        Creo esperienze web moderne e performanti.
-                    </p>
+        <div class="form__group">
+            <input type="email" id="email" name="email" class="form__input" placeholder=" " required>
+            <label for="email" class="form__label">Email</label>
+        </div>
+        <div class="form__group">
+            <input type="tel" id="phone" name="phone" class="form__input" placeholder=" ">
+            <label for="phone" class="form__label">Telefono (opzionale)</label>
+        </div>
+        <div class="form__group">
+            <select id="service" name="service" class="form__input" required>
+                <option value="">Seleziona un servizio</option>
+                <option value="sito-vetrina">Sito Web Vetrina</option>
+                <option value="ottimizzazione">Ottimizzazione Performance</option>
+                <option value="responsive">Responsive Design</option>
+                <option value="manutenzione">Manutenzione</option>
+                <option value="altro">Altro</option>
+            </select>
+            <label for="service" class="form__label">Servizio richiesto</label>
+        </div>
+        <div class="form__group">
+            <textarea id="message" name="message" class="form__input form__textarea" placeholder=" " required></textarea>
+            <label for="message" class="form__label">Messaggio</label>
+        </div>
+        <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Xstream">
+        <button type="submit" class="btn btn--primary btn--full">
+            <span class="btn__text">Invia messaggio</span>
+            <span class="btn__loading">Invio in corso...</span>
+        </button>
+    </form>
                 </div>
-                <div class="footer__links">
-                    <div class="footer__section">
-                        <h4 class="footer__title">Navigazione</h4>
-                        <ul class="footer__list">
-                            <li><a href="#home" class="footer__link">Home</a></li>
-                            <li><a href="#about" class="footer__link">Chi sono</a></li>
-                            <li><a href="#services" class="footer__link">Servizi</a></li>
-                            <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
-                        </ul>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__info">
+                        <div class="footer__logo">
+                            <span class="logo-text">X</span>
+                            <span class="logo-name">Xstream</span>
+                        </div>
+                        <p class="footer__text">
+                            Web Developer specializzato in HTML, CSS e JavaScript puro. 
+                            Creo esperienze web moderne e performanti.
+                        </p>
                     </div>
-                    <div class="footer__section">
-                        <h4 class="footer__title">Servizi</h4>
-                        <ul class="footer__list">
-                            <li><a href="#services" class="footer__link">Siti Web</a></li>
-                            <li><a href="#services" class="footer__link">Ottimizzazione</a></li>
-                            <li><a href="#services" class="footer__link">Responsive</a></li>
-                        </ul>
-                    </div>
-<div class="footer__section">
-  <h4 class="footer__title">Social</h4>
-  <div class="footer__social">
-    <a href="https://t.me/Xstream_0" class="social__link" title="Telegram">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M9.036 17.867l-.397 4.153c.57 0 .816-.246 1.113-.54l2.668-2.557 5.522 4.023c1.01.556 1.73.263 1.998-.94l3.627-17.062c.32-1.488-.542-2.066-1.528-1.71L1.44 9.397c-1.458.57-1.437 1.387-.25 1.747l5.494 1.717 12.76-8.05c.6-.405 1.145-.18.695.26l-10.27 9.24z"/>
-      </svg>
-    </a>
+                    <div class="footer__links">
+                        <div class="footer__section">
+                            <h4 class="footer__title">Navigazione</h4>
+                            <ul class="footer__list">
+                                <li><a href="#home" class="footer__link">Home</a></li>
+                                <li><a href="#about" class="footer__link">Chi sono</a></li>
+                                <li><a href="#services" class="footer__link">Servizi</a></li>
+                                <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__section">
+                            <h4 class="footer__title">Servizi</h4>
+                            <ul class="footer__list">
+                                <li><a href="#services" class="footer__link">Siti Web</a></li>
+                                <li><a href="#services" class="footer__link">Ottimizzazione</a></li>
+                                <li><a href="#services" class="footer__link">Responsive</a></li>
+                            </ul>
+                        </div>
+    <div class="footer__section">
+      <h4 class="footer__title">Social</h4>
+      <div class="footer__social">
+        <a href="https://t.me/Xstream_0" class="social__link" title="Telegram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9.036 17.867l-.397 4.153c.57 0 .816-.246 1.113-.54l2.668-2.557 5.522 4.023c1.01.556 1.73.263 1.998-.94l3.627-17.062c.32-1.488-.542-2.066-1.528-1.71L1.44 9.397c-1.458.57-1.437 1.387-.25 1.747l5.494 1.717 12.76-8.05c.6-.405 1.145-.18.695.26l-10.27 9.24z"/>
+          </svg>
+        </a>
 
 <a href="https://www.instagram.com/xstream0/" class="social__link" title="Instagram">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
